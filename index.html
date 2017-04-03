@@ -1,66 +1,10 @@
-<html>
-
-  <head>
-    <title>myproject3</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Prociono|Shrikhand" rel="stylesheet">
-
- <script>
-$(document).ready(function() {
-var date1 = new Date();
-
-      function zeroFill (i) {
-  return (i < 10 ? '0' : '') + i
-}
-
-        function now () {
-  var d = new Date()
-  return d.getFullYear() + '-' +
-    zeroFill(d.getMonth() + 1) + '-' +
-    zeroFill(d.getDate()) + ' ' +
-    zeroFill(d.getHours()) + ':' +
-    zeroFill(d.getMinutes())
-}
-
-var date2 = now();
-
-$("<h4>").text(date1).css("color", "DeepPink").css("font-family", "Shrikhand").
-css("text-align", "center").appendTo("#h1");
-
-$("<h4>").text(date2).css("color", "blue").css("font-family", "Shrikhand").
-css("text-align", "center").appendTo("#h1");
-});
-</script>
-
-  </head>
-
-    <body>
-        <div class="container">
-            <h1 id ="h1" class="header">
-                URL Shortener Microservice
-            </h1>
-            <blockquote>
-                User stories:
-                <ul> 1) I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
-                </ul>
-                 <ul> 2) When I visit that shortened URL, it will redirect me to my original link.
-                </ul>
-            </blockquote>
-
-            <h3>Example usage (insert /new between the URL and the URL parameter) :</h3>
-            <code>https://little-url.herokuapp.com/new/https://www.google.com</code><br>
-            <h3>Example creation output:</h3>
-            <code>
-             {"original-url":"https://www.google.com","short_url":"https://little-url.herokuapp.com/1201"}
-            </code>
-             <h3>Example usage of the shortened URL</h3>
-             <code>https://little-url.herokuapp.com/1201</code><br>
-            <h3>This will redirect me to : </h3>
-             <code>https://www.google.com</code><br>
-
-        </div>
-    </body>
-
-</html>
+<form method="post" enctype="multipart/form-data" action ="/">
+  <div>
+    <label for="file">Choose a file</label>
+    <input type="file" id="file" name="myFile">
+  </div>
+  <div>
+    <button>Send the file</button>
+  </div>
+    <input type="submit" />
+</form>
